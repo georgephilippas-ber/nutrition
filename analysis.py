@@ -93,7 +93,7 @@ class Score:
         return (Score.score(food) - min_) / range_
 
     def score_squeezed(self, food: Dict, factor: float = 0.5, min_: float = 0.5):
-        return self.score_normalized(food) * factor + min_
+        return round(self.score_normalized(food) * factor + min_, 3)
 
 
 def check_weights():
