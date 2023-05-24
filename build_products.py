@@ -168,7 +168,7 @@ def write():
     array_ = [asdict(food_data.to_product(foundation_food)) for foundation_food in food_data.foundation_foods()]
 
     with open("./food_data.json", "w") as food_data_file:
-        food_data_file.write(json.dumps(array_))
+        json.dump(array_, food_data_file, indent=4)
 
 
 if __name__ == "__main__":
